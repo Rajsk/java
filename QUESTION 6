@@ -1,0 +1,45 @@
+import java.util.*;
+import java.lang.*;
+class Mani27{
+	public static void main(String[] args) {
+		Scanner ss=new Scanner(System.in);
+		System.out.print("enter the number people you want to enter :");
+		int n=ss.nextInt();
+		n*=3;
+		String[] a=new String[n];
+		int d=0,e=1,f=2;
+		for(int i=0;i<n;i++){
+			//int d=0,e=1,f=2;
+			if(i==d){
+				System.out.print("entr the name :");
+				a[i]=ss.next();
+				d=d+3;
+			}
+			if(i==e){
+				System.out.print("entr the year of join :");
+				a[i]=ss.next();
+				e+=3;
+			}
+			if(i==f){
+				System.out.print("entr the address :");
+				a[i]=ss.next();
+				f+=3;
+			}
+		}
+		System.out.println("NAME                YEAR YOU JOINED     ADDRESS");
+		for(int i=0;i<n;i++){
+			if(i%3==0){
+				System.out.println("");
+			}
+			System.out.print(a[i]);
+			print11(a[i]);
+		}
+
+	}
+	public static void print11(String a){
+		int j=a.length();
+		for(int i=j;i<20;i++){
+			System.out.print(" ");
+		}
+	}
+}

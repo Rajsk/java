@@ -1,0 +1,15 @@
+import java.util.*;
+import java.lang.*;
+class Mani28{
+	public static double Triangle(double a,double b,double c){
+		return (a*b*c);
+	}
+	public static void main(String[] args) {
+		Scanner ss=new Scanner(System.in);
+		double x=ss.nextDouble();
+		double y=ss.nextDouble();
+		double z=ss.nextDouble();
+		double d=Triangle(x,y,z);
+		System.out.println("area of a triangl is :"+d);
+	}
+}

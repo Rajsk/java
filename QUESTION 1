@@ -1,0 +1,42 @@
+import java.lang.*;
+import java.util.*;
+class Mani21{
+	interface if1{ int operations(int a,int b);}
+	private static int fun(int x,int y,if1 o){
+		return o.operations(x,y);
+	}
+	public static void main(String[] arg){
+		if1 add=(int a,int b)->a+b;
+		if1 sub=(int a,int b)->a-b;
+		if1 mul=(int a,int b)->a*b;
+		if1 div=(int a,int b)->a/b;
+		Scanner ss=new Scanner(System.in);
+		int m=ss.nextInt();
+		int n=ss.nextInt();
+		System.out.println("enter the operatio if add: 1 sub:2 mul:3 div: 4");
+		int p=ss.nextInt();
+		switch(p){
+			case 1:{
+				System.out.println("sum is"+fun(m,n,add));
+				break;
+			}
+			case 2:{
+				System.out.println("diff is"+fun(m,n,sub));
+				break;
+			}
+			case 3:{
+				System.out.println("pro is"+fun(m,n,mul));
+				break;
+			}
+			case 4:{
+				System.out.println("div is"+fun(m,n,div));
+				break;
+			}
+			default:{
+				System.out.println("Invalid input");
+				break;
+			}
+		}
+
+	}
+}

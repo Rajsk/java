@@ -1,0 +1,24 @@
+import java.util.*;
+import java.lang.*;
+
+class Mani29 {
+   public static < Integer >int  printGen( Integer in ) {
+      int i = (int) in;
+      i=(i*2)/3;
+      return i;
+      
+     }
+
+   public static void main(String args[]) {
+      Scanner ss=new Scanner(System.in);
+      int a;
+      try{
+      a = ss.nextInt();
+      Integer obj =  Integer.valueOf(a);
+       System.out.println("after generic method :"+printGen(obj));
+   }
+      catch(Exception e){
+         System.out.println("enter the integer value");
+      }
+   }
+}

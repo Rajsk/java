@@ -1,0 +1,31 @@
+import java.lang.*;
+import java.util.*;
+class Rectangle{
+	static int height,width;
+	public static void display(){
+		System.out.println("height ="+height+" width ="+width);
+	}
+
+}
+class Rectangle_area extends Rectangle{
+	public static void display(int a,int b){
+		System.out.println("area ="+(a*b));
+	}
+	public static void readInput(int a,int b){
+		height=a;
+		width=b;
+	}
+}
+class Mani22{
+	public static void main(String[] arg){
+		Scanner ss =new Scanner(System.in);
+		int a=ss.nextInt();
+		int b=ss.nextInt();
+		Rectangle_area obj=new Rectangle_area();
+		obj.readInput(a,b);
+		obj.display();
+		obj.display(obj.height,obj.width);
+
+
+	}
+}
